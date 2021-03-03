@@ -31,13 +31,13 @@ public class TestDbServlet extends HttpServlet {
 		try {
 			PrintWriter out = response.getWriter();
 			
-			System.out.println("Connecting to database: " + jdbcUrl);
+			out.println("Connecting to database: " + jdbcUrl);
 			
 			Class.forName(driver);
 			
 			Connection connection = DriverManager.getConnection(jdbcUrl, user, pass);
 			
-			System.out.println("Connection established.");
+			out.println("\nConnection established.");
 			
 			connection.close();
 		}
@@ -46,5 +46,4 @@ public class TestDbServlet extends HttpServlet {
 			throw new ServletException(e);
 		}
 	}
-
 }
