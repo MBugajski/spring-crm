@@ -1,4 +1,4 @@
-package com.mbugajski.springdemo.crm.entity;
+package com.mbugajski.spring.crm.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

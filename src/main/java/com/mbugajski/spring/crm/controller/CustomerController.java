@@ -1,4 +1,4 @@
-package com.mbugajski.springdemo.crm.controller;
+package com.mbugajski.spring.crm.controller;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.mbugajski.springdemo.crm.dao.CustomerDAO;
-import com.mbugajski.springdemo.crm.entity.Customer;
+import com.mbugajski.spring.crm.dao.CustomerDAO;
+import com.mbugajski.spring.crm.entity.Customer;
 
 @Controller
 @RequestMapping("/customer")

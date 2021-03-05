@@ -1,4 +1,4 @@
-package com.mbugajski.springdemo.crm.testdb;
+package com.mbugajski.spring.crm.testdb;
 
 import java.io.IOException;
 import java.io.PrintWriter;

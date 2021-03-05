@@ -9,3 +9,4 @@ Customer Relationship Manager web app using Spring MVC and Hibernate
 * JDBC
 * Hibernate
 * Log4j
+* Maven

@@ -1,8 +1,8 @@
-package com.mbugajski.springdemo.crm.dao;
+package com.mbugajski.spring.crm.dao;
 
 import java.util.List;
 
-import com.mbugajski.springdemo.crm.entity.Customer;
+import com.mbugajski.spring.crm.entity.Customer;
 
 public interface CustomerDAO {
 
