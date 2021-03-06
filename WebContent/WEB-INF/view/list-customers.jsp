@@ -27,7 +27,12 @@
 	
 		<div id="content">
 		
-			<!--  add our html table here -->
+		
+			<input type="button", value="Add Customer"
+				onclick="window.location.href='showFormForAdd'; return false;"
+				class="add_button"
+			/>
+		
 		
 			<table>
 				<tr>
@@ -36,7 +41,6 @@
 					<th>Email</th>
 				</tr>
 				
-				<!-- loop over and print our customers -->
 				<c:forEach var="tempCustomer" items="${customers}">
 				
 					<tr>
