@@ -1,0 +1,1 @@
+<% respose.sendRediredct("customer/list"); %>
