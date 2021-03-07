@@ -24,6 +24,9 @@
 		<form:form action="saveCustomer" modelAttribue="customer"
 			method="POST">
 
+			<!--  Hidden form field to keep track of recovered customer object -->
+			<form:hidden path="id"/>
+
 			<table>
 				<tbody>
 					<tr>

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.mbugajski.springdemo.crm.entity.Customer;
 
 @Repository
-public class CustyomerDAOImpl implements CustomerDAO {
+public class CustomerDAOImpl implements CustomerDAO {
 
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -33,7 +33,15 @@ public class CustyomerDAOImpl implements CustomerDAO {
 
 		Session currentSession = sessionFactory.getCurrentSession();
 
-		currentSession.save(theCustomer);
+		currentSession.saveOrUpdate(theCustomer);
+	}
+
+	@Override
+	public Customer getCustomer(int theId) {
+		
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		return currentSession.get(Customer.class, theId);
 	}
 
 }
