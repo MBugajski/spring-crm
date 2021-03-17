@@ -22,12 +22,15 @@ public class TestDbServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
+		// setup connection variables
 		String user = "springcrm";
 		String pass = "springcrm";
 		
 		String jdbcUrl = "jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&serverTimezone=UTC";
 		String driver = "com.mysql.jdbc.Driver";
+		
+		// get connection to database
 		try {
 			PrintWriter out = response.getWriter();
 			
@@ -35,15 +38,26 @@ public class TestDbServlet extends HttpServlet {
 			
 			Class.forName(driver);
 			
-			Connection connection = DriverManager.getConnection(jdbcUrl, user, pass);
+			Connection myConn = DriverManager.getConnection(jdbcUrl, user, pass);
 			
-			out.println("\nConnection established.");
+			out.println("SUCCESS!!!");
 			
-			connection.close();
+			myConn.close();
+			
 		}
-		catch (Exception e){
-			e.printStackTrace();
-			throw new ServletException(e);
+		catch (Exception exc) {
+			exc.printStackTrace();
+			throw new ServletException(exc);
 		}
+	
+	
 	}
+
 }
+
+
+
+
+
+
+
