@@ -1,15 +1,18 @@
-<%@ taglib prefix="form" uri="http://java.sun.com/jsp/jstl/core"
-	prefix="c"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Save Customer</title>
-<link type="text/css" rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/style.css">
 
-<link type="text/css" rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/add-customer-style.css">
+<head>
+	<title>Save Customer</title>
+	
+	<link type="text/css" 
+		rel="stylesheet"
+		href="${pageContext.request.contextPath}/resources/css/style.css">
+	
+	<link type="text/css" 
+		rel="stylesheet"
+		href="${pageContext.request.contextPath}/resources/css/add-customer-style.css">
 </head>
 <body>
 	<div id="wrapper">
@@ -21,11 +24,9 @@
 	<div id="container">
 		<h3>Save Customer</h3>
 
-		<form:form action="saveCustomer" modelAttribue="customer"
-			method="POST">
+		<form:form action="saveCustomer" modelAttribute="customer" method="POST">
 
-			<!--  Hidden form field to keep track of recovered customer object -->
-			<form:hidden path="id"/>
+			<form:hidden path="id" />
 
 			<table>
 				<tbody>
@@ -43,7 +44,7 @@
 						<td><label>Email:</label></td>
 						<td><form:input path="email" /></td>
 					</tr>
-					
+
 					<tr>
 						<td><label></label></td>
 						<td><input type="submit" value="Save" class="save" /></td>
@@ -51,13 +52,14 @@
 				</tbody>
 			</table>
 		</form:form>
-		
+
 		<div style="clear; both;"></div>
-		
+
 		<p>
-			<a href="${pageContext.request.contextPath}/customer/list">Back to Customer List</a>
+			<a href="${pageContext.request.contextPath}/customer/list">Back
+				to Customer List</a>
 		</p>
-	
+
 	</div>
 </body>
 </html>

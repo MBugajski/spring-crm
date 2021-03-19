@@ -28,11 +28,10 @@
 		<div id="content">
 		
 		
-			<input type="button", value="Add Customer"
-				onclick="window.location.href='showFormForAdd'; return false;"
-				class="add_button"
+			<input type="button" value="Add Customer"
+				   onclick="window.location.href='showFormForAdd'; return false;"
+				   class="add-button"
 			/>
-		
 		
 			<table>
 				<tr>
@@ -55,9 +54,9 @@
 						<td> ${tempCustomer.lastName} </td>
 						<td> ${tempCustomer.email} </td>
 						<td>
-							 <a href="${UpdateLink}">Update</a>
+							 <a href="${updateLink}">Update</a>
 							|
-							 <a href="${DeleteLink}"
+							 <a href="${deleteLink}"
 								onclick="if (!(confirem('Are you sure you want to delete this customer?'))) return false">Delete</a>
 						</td>
 					</tr>
@@ -70,7 +69,6 @@
 	
 	</div>
 	
-
 </body>
 
 </html>
