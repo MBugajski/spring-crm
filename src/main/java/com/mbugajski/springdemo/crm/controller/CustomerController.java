@@ -45,7 +45,7 @@ public class CustomerController {
 		
 		customerService.saveCustomer(theCustomer);
 		
-		return "redirect:/customer/list/";
+		return "redirect:/customer/list";
 	}
 	
 	@GetMapping("/showFormForUpdate")
@@ -59,10 +59,10 @@ public class CustomerController {
 	}
 
 	@GetMapping("/delete")
-	public String deleteCustomer(@RequestParam("customerId") int theId, Model theModel) {
+	public String deleteCustomer(@RequestParam("customerId") int theId) {
 		
 		customerService.deleteCustomer(theId);
 		
-		return "rediredt:/list/customer";
+		return "rediredt:/customer/list";
 	}
 }
