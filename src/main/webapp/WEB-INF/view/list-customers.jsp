@@ -69,6 +69,8 @@
 	
 	</div>
 	
+	<a href="${pageContext.request.contextPath}/api/customers">Temporary REST controller display</a>
+	
 </body>
 
 </html>
