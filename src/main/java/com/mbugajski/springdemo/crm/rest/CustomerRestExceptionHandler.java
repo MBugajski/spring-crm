@@ -19,5 +19,17 @@ public class CustomerRestExceptionHandler {
 		
 		return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
 	}
+	
+	@ExceptionHandler
+	public ResponseEntity<CustomerErrorResponse> handleException(Exception exc) {
+		
+		CustomerErrorResponse errorResponse = new CustomerErrorResponse();
+		
+		errorResponse.setStatus(HttpStatus.BAD_REQUEST.value());
+		errorResponse.setMessage("Request failed.");
+		errorResponse.setTimeStamp(System.currentTimeMillis());
+		
+		return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+	}
 
 }
