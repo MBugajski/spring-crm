@@ -25,7 +25,7 @@ public class CustomerRestExceptionHandler {
 		
 		CustomerErrorResponse errorResponse = new CustomerErrorResponse(
 													HttpStatus.BAD_REQUEST.value(), 
-													"Request failed.", 
+													exc.getMessage(), 
 													System.currentTimeMillis());
 		
 		return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
