@@ -39,7 +39,7 @@ public class CustomerRestController {
 		return theCustomer;
 	}
 	
-	@PostMapping
+	@PostMapping("/customers")
 	public Customer addCustomer(@RequestBody Customer theCustomer) {
 		
 		//to force a save instead of an update in case of ID passed in JSON
